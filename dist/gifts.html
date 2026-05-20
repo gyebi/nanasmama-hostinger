@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nana's Mama Gifts</title>
+  <link rel="icon" type="image/png" href="/assets/nanasmama-logo-Bn2K3h3a.png">
+  <meta name="description" content="Shop curated Nana's Mama gift sets, wedding gifts, wellness bundles, and personalized gift ideas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+  <style>
+    .gifts-hero-section {
+      padding: 0;
+    }
+
+    .gifts-hero-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+      padding: 0;
+      border-radius: 0;
+      border: 0;
+      box-shadow: none;
+      background: rgba(255, 250, 244, 0.82);
+      isolation: isolate;
+    }
+
+    .gifts-hero-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+    }
+
+    .gifts-hero-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(38, 27, 18, 0.18) 0%, rgba(38, 27, 18, 0.1) 45%, rgba(38, 27, 18, 0.78) 100%),
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.08), transparent 48%);
+      z-index: 1;
+    }
+
+    .gifts-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 1.6rem 3rem 2.5rem;
+      color: #fffaf4;
+    }
+
+    .gifts-hero-content {
+      width: min(460px, 100%);
+      text-align: left;
+    }
+
+    .gifts-hero-content .eyebrow {
+      color: rgba(255, 250, 244, 0.86);
+      margin-bottom: 1rem;
+    }
+
+    .gifts-hero-title {
+      max-width: 15ch;
+      font-size: clamp(2.35rem, 4.4vw, 4.5rem);
+      margin-bottom: 1rem;
+      text-shadow: 0 12px 30px rgba(27, 18, 12, 0.28);
+      transform-origin: center;
+      animation: gifts-title-bloom 14s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+
+    .gifts-hero-copy {
+      margin: 0;
+      color: rgba(255, 250, 244, 0.92);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-shadow: 0 10px 28px rgba(27, 18, 12, 0.22);
+      transform: translateY(20%);
+    }
+
+    .gifts-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+      transform: translateY(20%);
+    }
+
+    .gifts-hero-actions .button-secondary {
+      border-color: rgba(255, 250, 244, 0.35);
+      background: rgba(255, 250, 244, 0.12);
+      color: #fffaf4;
+    }
+
+    @keyframes gifts-title-bloom {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.18);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .gifts-hero-card img {
+        min-height: 460px;
+      }
+
+      .gifts-hero-overlay {
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 1.6rem 2rem 2.2rem;
+      }
+
+      .gifts-hero-content {
+        width: min(420px, 100%);
+        text-align: left;
+      }
+
+      .gifts-hero-copy {
+        transform: translateY(20%);
+      }
+
+      .gifts-hero-actions {
+        justify-content: flex-start;
+        transform: translateY(20%);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gifts-hero-section {
+        padding: 0;
+      }
+
+      .gifts-hero-overlay {
+        padding: 1.4rem;
+      }
+
+      .gifts-hero-card {
+        min-height: 420px;
+      }
+
+      .gifts-hero-title {
+        font-size: clamp(2.3rem, 9vw, 3.5rem);
+      }
+
+      .gifts-hero-actions {
+        justify-content: center;
+        transform: none;
+      }
+
+      .gifts-hero-copy {
+        transform: none;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/main-CIdn2kVp.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-j7Q9K83P.css">
+  <link rel="canonical" href="https://nanasmama.com/gifts.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nana's Mama">
+  <meta property="og:title" content="Nana's Mama Gifts">
+  <meta property="og:description" content="Shop curated Nana's Mama gift sets, wedding gifts, wellness bundles, and personalized gift ideas.">
+  <meta property="og:url" content="https://nanasmama.com/gifts.html">
+  <meta property="og:image" content="https://nanasmama.com/assets/custom-gifting/hero/pink-wedding-gift-hamper.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html#top" aria-label="Nana's Mama home">
+          <img decoding="async" src="/assets/nanasmama-logo-Bn2K3h3a.png" alt="Nana's Mama logo" loading="eager">
+        </a>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="./index.html#hero">Home</a>
+          <a href="./custom-packaging.html">Custom Packaging</a>
+          <a href="./gifts.html#upcoming">Upcoming</a>
+          <a href="./products.html">The Shop</a>
+          <a href="./our-work.html">Our Work</a>
+          <div class="nav-dropdown">
+            <a class="nav-dropdown-trigger" href="./AboutUs.html">About Us</a>
+            <div class="nav-dropdown-menu" aria-label="About Us submenu">
+              <a href="./AboutUs.html#our-values">Our Values</a>
+              <a href="./AboutUs.html#african-connection">African Connection</a>
+            </div>
+          </div>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a class="favorites-link icon-link" href="./favorites.html" aria-label="View favorites">
+            <span class="icon-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20.25c-4.48-2.58-7.25-5.32-7.25-8.93A4.3 4.3 0 0 1 9 7a4.5 4.5 0 0 1 3 1.49A4.5 4.5 0 0 1 15 7a4.3 4.3 0 0 1 4.25 4.32c0 3.61-2.77 6.35-7.25 8.93Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="sr-only">Favorites</span>
+            <span class="favorites-count" data-favorites-count>0</span>
+          </a>
+          <button class="basket-toggle icon-button" type="button" aria-label="Open basket" aria-expanded="false" aria-controls="basket-panel">
+            <span class="icon-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 10V8.5a4 4 0 1 1 8 0V10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                <path d="M5.5 10h13l-1 9.5a1.75 1.75 0 0 1-1.74 1.5H8.24A1.75 1.75 0 0 1 6.5 19.5Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="sr-only">Basket</span>
+            <span class="basket-count" data-basket-count>0</span>
+          </button>
+          <button class="menu-toggle icon-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="icon-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+                <path d="M4 12h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+                <path d="M4 17h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="sr-only">Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <aside id="basket-panel" class="basket-panel" aria-label="Shopping basket">
+      <div class="basket-panel-header">
+        <div>
+          <p class="eyebrow">Your order</p>
+          <h2>Basket</h2>
+        </div>
+        <button class="basket-close" type="button" aria-label="Close basket">Close</button>
+      </div>
+      <div class="basket-items" data-basket-items>
+        <p class="basket-empty">Your basket is empty.</p>
+      </div>
+      <div class="basket-summary">
+        <div class="basket-row">
+          <span>Subtotal</span>
+          <strong data-basket-subtotal>$0.00</strong>
+        </div>
+        <div class="basket-row">
+          <span>Shipping</span>
+          <strong data-basket-shipping>$7.00</strong>
+        </div>
+        <div class="basket-row basket-row-total">
+          <span>Total</span>
+          <strong data-basket-total>$0.00</strong>
+        </div>
+        <a class="button button-primary basket-checkout-link" href="./cart.html">Proceed to checkout</a>
+      </div>
+    </aside>
+
+    <main id="top">
+      <section class="gifts-hero-section">
+        <aside class="gifts-hero-card" aria-label="Featured Nana's Mama gift image">
+          <img decoding="async" fetchpriority="high" src="/assets/gift-hero-3-CF3ZhJM-.webp" alt="Nana's Mama gift set styled for gifting" loading="eager">
+          <div class="gifts-hero-overlay">
+            <div class="gifts-hero-content">
+              <h1 class="gifts-hero-title">Plan Events with Gifts That Feel Personal</h1>
+              <p class="gifts-hero-copy">
+                Discover warm, thoughtful Nana's Mama picks for birthdays, thank-yous, care packages,
+                and everyday surprises rooted in handmade Ghanaian care.
+              </p>
+              <div class="gifts-hero-actions">
+                <a class="button button-primary" href="#upcoming">View upcoming dates</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="upcoming" class="upcoming-gifts">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Upcoming</p>
+              <h2>Special dates on the calendar</h2>
+            </div>
+          </div>
+          <div class="upcoming-grid">
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-05-25">
+              <p class="upcoming-date">May 25, 2026</p>
+              <h3>Memorial Day</h3>
+              <p>Care sets and gathering gifts for long-weekend visits, hosts, and thoughtful remembrance moments.</p>
+              <a class="gift-idea-link" href="./products.html">Browse care sets</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-06-19">
+              <p class="upcoming-date">June 19, 2026</p>
+              <h3>Juneteenth</h3>
+              <p>Curated care packages and meaningful beauty gifts rooted in celebration, heritage, and community.</p>
+              <a class="gift-idea-link" href="./products.html">Shop care picks</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-06-21">
+              <p class="upcoming-date">June 21, 2026</p>
+              <h3>Father's Day</h3>
+              <p>Simple, personal gift boxes for dads, grandfathers, mentors, and the steady people who show up.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Request a gift box</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-07-04">
+              <p class="upcoming-date">July 4, 2026</p>
+              <h3>Independence Day</h3>
+              <p>Hostess gifts, summer thank-yous, and small-batch care sets for gatherings and long-weekend visits.</p>
+              <a class="gift-idea-link" href="./products.html">Browse summer gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-08-10">
+              <p class="upcoming-date">August 2026</p>
+              <h3>Back to School</h3>
+              <p>Small encouragement gifts for teachers, students, dorm move-ins, and families starting a new season.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Build a school gift</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-09-07">
+              <p class="upcoming-date">September 7, 2026</p>
+              <h3>Labor Day</h3>
+              <p>End-of-summer thank-yous, host gifts, and self-care bundles for a quiet reset before fall.</p>
+              <a class="gift-idea-link" href="./products.html">Shop reset gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-09-13">
+              <p class="upcoming-date">September 13, 2026</p>
+              <h3>Grandparents Day</h3>
+              <p>Warm, personal packages for grandparents and elders, with notes and familiar comfort details.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Plan a family gift</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-10-31">
+              <p class="upcoming-date">October 31, 2026</p>
+              <h3>Halloween</h3>
+              <p>Seasonal treat boxes, party favors, and cozy fall care gifts for friends, teams, and families.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Request fall gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-11-11">
+              <p class="upcoming-date">November 11, 2026</p>
+              <h3>Veterans Day</h3>
+              <p>Respectful thank-you gifts for veterans, service families, community partners, and appreciation events.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Plan appreciation gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-11-26">
+              <p class="upcoming-date">November 26, 2026</p>
+              <h3>Thanksgiving</h3>
+              <p>Hostess gifts, family care boxes, and gratitude packages for clients, teams, neighbors, and loved ones.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Start holiday gifting</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-11-27">
+              <p class="upcoming-date">November 27, 2026</p>
+              <h3>Black Friday</h3>
+              <p>Limited seasonal product bundles and ready-to-gift sets for shoppers planning early holiday presents.</p>
+              <a class="gift-idea-link" href="./products.html">Shop product gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-11-30">
+              <p class="upcoming-date">November 30, 2026</p>
+              <h3>Cyber Monday</h3>
+              <p>Online-friendly beauty bundles and giftable care picks for easy holiday ordering.</p>
+              <a class="gift-idea-link" href="./products.html">Browse online gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-12-25">
+              <p class="upcoming-date">December 25, 2026</p>
+              <h3>Christmas Day</h3>
+              <p>Custom holiday boxes, stocking-ready care products, and thoughtful gifts for family, clients, and teams.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Plan Christmas gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-12-26">
+              <p class="upcoming-date">December 26, 2026</p>
+              <h3>Kwanzaa</h3>
+              <p>Meaningful care gifts and heritage-rooted bundles for family celebrations and community moments.</p>
+              <a class="gift-idea-link" href="./contact.html#contact-brief">Create Kwanzaa gifts</a>
+            </article>
+            <article class="upcoming-card" data-upcoming-event data-event-date="2026-12-31">
+              <p class="upcoming-date">December 31, 2026</p>
+              <h3>New Year's Eve</h3>
+              <p>Fresh-start self-care gifts, thank-you boxes, and celebration favors for closing the year beautifully.</p>
+              <a class="gift-idea-link" href="./products.html">Shop fresh-start gifts</a>
+            </article>
+          </div>
+          <p class="upcoming-empty" data-upcoming-empty hidden>New seasonal dates are coming soon.</p>
+        </div>
+      </section>
+
+      <section class="gift-note-strip">
+        <div class="container">
+          <div class="gift-note-card">
+            <div>
+              <p class="eyebrow">Make it special</p>
+              <h2>Add a note and send a little love</h2>
+              <p class="lede">
+                Contact us to add a note, request custom packaging, or turn any order into a heartfelt gift.
+              </p>
+            </div>
+            <a class="button button-primary" href="./contact.html">Go to gift checkout</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img loading="lazy" decoding="async" class="footer-logo" src="/assets/nanasmama-logo-Bn2K3h3a.png" alt="Nana's Mama logo">
+          <p>Pure, handcrafted care rooted in Ghanaian heritage.</p>
+        </div>
+        <div>
+          <h2>Site Map</h2>
+          <a href="./index.html#hero">Home</a>
+          <a href="./gifts.html">Shop Gifts</a>
+          <a href="./custom-packaging.html">Custom Packaging</a>
+          <a href="./gifts.html#upcoming">Upcoming</a>
+          <a href="./products.html">The Shop</a>
+          <a href="./our-work.html">Our Work</a>
+          <a href="./AboutUs.html">About Us</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./refund-policy.html">Return &amp; Refund Policy</a>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <a href="tel:+16159682293">+1 (615) 968-2293</a>
+          <a href="mailto:Nanasmamashea@gmail.com">Nanasmamashea@gmail.com</a>
+          <a href="sms:+16159682293">Text Nana's Mama</a>
+          <div class="footer-icon-row">
+            <div class="social-links" aria-label="Social media links">
+              <a class="social-link" href="tel:+16159682293" title="Call +1 (615) 968-2293" aria-label="Call +1 (615) 968-2293">
+                <span class="social-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+                <span class="sr-only">Phone</span>
+              </a>
+              <a class="social-link" href="mailto:Nanasmamashea@gmail.com" title="Email Nanasmamashea@gmail.com" aria-label="Email Nanasmamashea@gmail.com">
+                <span class="social-icon" aria-hidden="true"><i class="fa-regular fa-envelope"></i></span>
+                <span class="sr-only">Email</span>
+              </a>
+              <a class="social-link" href="https://www.instagram.com/nanas_mama.3?igsh=ajlncDlsejd2dno5" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+                <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+              </a>
+              <a class="social-link" href="https://www.youtube.com/@Nanas_mama" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+                <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+              </a>
+              <a class="social-link" href="https://www.snapchat.com/add/nanasmamahse?" target="_blank" rel="noreferrer noopener" aria-label="Snapchat">
+                <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-snapchat"></i></span>
+              </a>
+              <a class="social-link" href="sms:+16159682293" aria-label="Text Nana's Mama support">
+                <span class="social-icon" aria-hidden="true"><i class="fa-regular fa-comment-dots"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p>Copyright &copy; 2026 nanasmama.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <a class="floating-sms-chat" href="sms:+16159682293" aria-label="Text Nana's Mama support">
+    <i class="fa-regular fa-comment-dots" aria-hidden="true"></i>
+    <span class="sr-only">Text Nana's Mama support</span>
+  </a>
+</body>
+</html>

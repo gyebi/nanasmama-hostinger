@@ -1,0 +1,9 @@
+node_modules
+.vite
+.firebase
+functions_old/
+firebase-debug.log
+firebase-debug.*.log
+.env
+.env.*
+!.env.example

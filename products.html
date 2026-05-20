@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nana's Mama Products</title>
+  <link rel="icon" type="image/png" href="./assets/nanasmama-logo.png">
+  <meta
+    name="description"
+    content="Browse Nana's Mama products by Skin Care, Hair Care, and Bath and Body. Explore handcrafted shea blends and everyday essentials."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html#top" aria-label="Nana's Mama home">
+          <img decoding="async" src="./assets/nanasmama-logo.png" alt="Nana's Mama logo">
+        </a>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="./index.html#hero">Home</a>
+          <a href="./custom-packaging.html">Custom Packaging</a>
+          <a href="./gifts.html#upcoming">Upcoming</a>
+          <a href="./products.html">The Shop</a>
+          <a href="./our-work.html">Our Work</a>
+          <div class="nav-dropdown">
+            <a class="nav-dropdown-trigger" href="./AboutUs.html">About Us</a>
+            <div class="nav-dropdown-menu" aria-label="About Us submenu">
+              <a href="./AboutUs.html#our-values">Our Values</a>
+              <a href="./AboutUs.html#african-connection">African Connection</a>
+            </div>
+          </div>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a class="favorites-link icon-link" href="./favorites.html" aria-label="View favorites">
+            <span class="icon-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20.25c-4.48-2.58-7.25-5.32-7.25-8.93A4.3 4.3 0 0 1 9 7a4.5 4.5 0 0 1 3 1.49A4.5 4.5 0 0 1 15 7a4.3 4.3 0 0 1 4.25 4.32c0 3.61-2.77 6.35-7.25 8.93Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="sr-only">Favorites</span>
+            <span class="favorites-count" data-favorites-count>0</span>
+          </a>
+          <a class="basket-toggle icon-button" href="./cart.html" aria-label="View cart">
+            <span class="icon-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 10V8.5a4 4 0 1 1 8 0V10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                <path d="M5.5 10h13l-1 9.5a1.75 1.75 0 0 1-1.74 1.5H8.24A1.75 1.75 0 0 1 6.5 19.5Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="sr-only">Cart</span>
+            <span class="basket-count" data-basket-count>0</span>
+          </a>
+          <button class="menu-toggle icon-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="icon-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+                <path d="M4 12h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+                <path d="M4 17h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="sr-only">Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="page-intro">
+        <div class="container page-intro-grid">
+          <div class="page-intro-panel">
+            <p class="eyebrow">Shop by collection</p>
+            <h1>Explore Every Nana's Mama Product</h1>
+            <p class="lede">
+              Browse our collection of skin nourishment, hair care, or bath and body essentials.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#skin-care">Start with Skin Care</a>
+              <a class="button button-secondary" href="./AboutUs.html#our-values">Read Our Story</a>
+            </div>
+          </div>
+          <aside class="section-note shop-feature-card" aria-label="Featured product image">
+            <img decoding="async" fetchpriority="high" src="./assets/Nanas%20Mama/hair-shea-lifestyle-1.jpg" alt="Nana's Mama product collection">
+            <div class="shop-feature-copy">
+              <p class="eyebrow">Handcrafted care</p>
+              <h2>Rooted in Ghanaian heritage</h2>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="bestsellers" class="products bestsellers-shop">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Bestsellers</p>
+              <h2>Beauty favorites for every box</h2>
+            </div>
+          </div>
+          <div class="product-grid bestseller-grid">
+            <article class="product-card" data-product-id="hair-shea" data-product-name="Nanasmama Hair Shea" data-product-price="19.99">
+              <button class="favorite-button" type="button" aria-label="Add Hair Shea to favorites">♡</button>
+              <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/clearing-shea-jar-3.jpg" alt="Hair Shea">
+              <div class="product-copy">
+                <p class="product-brand">Nana's Mama</p>
+                <h3>Nanasmama Hair Shea</h3>
+                <strong class="product-price">$19.99</strong>
+                <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/UckQSgI8">Buy Now</button>
+              </div>
+            </article>
+            <article class="product-card" data-product-id="shea-butter" data-product-name="Nanasmama Organic Shea Butter" data-product-price="19.99">
+              <button class="favorite-button" type="button" aria-label="Add Shea Butter to favorites">♡</button>
+              <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/shea-butter-jar-1.jpg" alt="Shea butter">
+              <div class="product-copy">
+                <p class="product-brand">Nana's Mama</p>
+                <h3>Nanasmama Organic Shea Butter</h3>
+                <strong class="product-price">$19.99</strong>
+                <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/IhrLBmzD">Buy Now</button>
+              </div>
+            </article>
+            <article class="product-card" data-product-id="relaxing-shea" data-product-name="Nanasmama Relaxing Shea" data-product-price="19.99">
+              <button class="favorite-button" type="button" aria-label="Add Relaxing Shea to favorites">♡</button>
+              <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/relaxing-shea-jar-3.jpg" alt="Relaxing Shea">
+              <div class="product-copy">
+                <p class="product-brand">Nana's Mama</p>
+                <h3>Nanasmama Relaxing Shea</h3>
+                <strong class="product-price">$19.99</strong>
+                <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/yisppAS0">Buy Now</button>
+              </div>
+            </article>
+            <article class="product-card" data-product-id="african-black-soap" data-product-name="Nanasmama African Black Soap" data-product-price="19.99">
+              <button class="favorite-button" type="button" aria-label="Add African Black Soap to favorites">♡</button>
+              <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/african-black-soap.webp" alt="African Black Soap">
+              <div class="product-copy">
+                <p class="product-brand">Nana's Mama</p>
+                <h3>Nanasmama African Black Soap</h3>
+                <strong class="product-price">$19.99</strong>
+                <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/45wLDhTP">Buy Now</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="products">
+        <div class="container section-stack">
+          <div id="skin-care" class="section-anchor" aria-hidden="true"></div>
+          <section class="product-section">
+            <div class="section-intro">
+              <p class="eyebrow">Skin Care</p>
+              <h2>Daily moisture, glow, and gentle support</h2>
+              <p class="lede">For softening dry skin, supporting clarity, and building a simple ritual around rich shea-based care.</p>
+            </div>
+            <div class="product-grid product-section-grid">
+              <article class="product-card" data-product-id="shea-butter" data-product-name="Nanasmama Organic Shea Butter" data-product-price="19.99">
+                <button class="favorite-button" type="button" aria-label="Add Shea Butter 8.5 oz to favorites">♡</button>
+                <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/shea-butter-jar-1.jpg" alt="Shea Butter">
+                <div class="product-copy">
+                  <p class="product-brand">Nana's Mama</p>
+                  <h3>Nanasmama Organic Shea Butter</h3>
+                  <p class="product-summary">A rich everyday moisturizer for dry skin, rough patches, and lasting softness.</p>
+                  <strong class="product-price" data-product-price-display>$19.99</strong>
+                  <div class="product-option-group" aria-label="Choose Shea Butter size">
+                    <span class="product-option-label">Size:</span>
+                    <div class="product-size-options">
+                      <button class="product-size-option is-selected" type="button" data-product-variant data-variant-id="shea-butter-big" data-variant-label="8.5 oz" data-variant-price="19.99" data-square-payment-link="https://square.link/u/IhrLBmzD" aria-pressed="true">8.5 oz</button>
+                      <button class="product-size-option" type="button" data-product-variant data-variant-id="shea-butter-small" data-variant-label="5.5 oz" data-variant-price="14.99" data-square-payment-link="https://square.link/u/oldHGGos" aria-pressed="false">5.5 oz</button>
+                    </div>
+                  </div>
+                  <div class="product-option-group">
+                    <span class="product-option-label">Quantity:</span>
+                    <div class="quantity-selector" data-product-quantity>
+                      <button type="button" data-quantity-action="decrease" aria-label="Decrease Shea Butter quantity">-</button>
+                      <span data-quantity-value>1</span>
+                      <button type="button" data-quantity-action="increase" aria-label="Increase Shea Butter quantity">+</button>
+                    </div>
+                  </div>
+                  <div class="product-card-actions">
+                    <button class="button add-to-basket add-to-bag" type="button">Add to Cart</button>
+                    <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/IhrLBmzD">Buy Now</button>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card" data-product-id="relaxing-shea" data-product-name="Nanasmama Relaxing Shea" data-product-price="19.99">
+                <button class="favorite-button" type="button" aria-label="Add Relaxing Shea 8.5 oz to favorites">♡</button>
+                <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/relaxing-shea-jar-3.jpg" alt="Relaxing Shea">
+                <div class="product-copy">
+                  <p class="product-brand">Nana's Mama</p>
+                  <h3>Nanasmama Relaxing Shea</h3>
+                  <p class="product-summary">A calming shea blend made to support evening routines and deeply comfort skin.</p>
+                  <strong class="product-price" data-product-price-display>$19.99</strong>
+                  <div class="product-option-group" aria-label="Choose Relaxing Shea size">
+                    <span class="product-option-label">Size:</span>
+                    <div class="product-size-options">
+                      <button class="product-size-option is-selected" type="button" data-product-variant data-variant-id="relaxing-shea-big" data-variant-label="8.5 oz" data-variant-price="19.99" data-square-payment-link="https://square.link/u/yisppAS0" aria-pressed="true">8.5 oz</button>
+                      <button class="product-size-option" type="button" data-product-variant data-variant-id="relaxing-shea-small" data-variant-label="5.5 oz" data-variant-price="14.99" data-square-payment-link="https://square.link/u/FnQVCArh" aria-pressed="false">5.5 oz</button>
+                    </div>
+                  </div>
+                  <div class="product-option-group">
+                    <span class="product-option-label">Quantity:</span>
+                    <div class="quantity-selector" data-product-quantity>
+                      <button type="button" data-quantity-action="decrease" aria-label="Decrease Relaxing Shea quantity">-</button>
+                      <span data-quantity-value>1</span>
+                      <button type="button" data-quantity-action="increase" aria-label="Increase Relaxing Shea quantity">+</button>
+                    </div>
+                  </div>
+                  <div class="product-card-actions">
+                    <button class="button add-to-basket add-to-bag" type="button">Add to Cart</button>
+                    <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/yisppAS0">Buy Now</button>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card" data-product-id="ekuro-bewu" data-product-name="Ekuro Bewu" data-product-price="5.00">
+                <button class="favorite-button" type="button" aria-label="Add Ekuro Bewu to favorites">♡</button>
+                <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/balms-ekuro-bewu.png" alt="Ekuro Bewu balm">
+                <div class="product-copy">
+                  <p class="product-brand">Nana's Mama</p>
+                  <h3>Ekuro Bewu</h3>
+                  <p class="product-summary">A compact balm for simple everyday skin care and on-the-go moisture.</p>
+                  <strong class="product-price" data-product-price-display>$5.00</strong>
+                  <div class="product-option-group">
+                    <span class="product-option-label">Quantity:</span>
+                    <div class="quantity-selector" data-product-quantity>
+                      <button type="button" data-quantity-action="decrease" aria-label="Decrease Ekuro Bewu quantity">-</button>
+                      <span data-quantity-value>1</span>
+                      <button type="button" data-quantity-action="increase" aria-label="Increase Ekuro Bewu quantity">+</button>
+                    </div>
+                  </div>
+                  <div class="product-card-actions">
+                    <button class="button add-to-basket add-to-bag" type="button">Add to Cart</button>
+                    <a
+                      class="button buy-now-button"
+                      href="https://square.link/u/T1Au30wR"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Buy Now
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <div id="hair-care" class="section-anchor" aria-hidden="true"></div>
+          <section class="product-section">
+            <div class="section-intro">
+              <p class="eyebrow">Hair Care</p>
+              <h2>Moisture-first care for scalp and strands</h2>
+              <p class="lede">Built around rich nourishment for textured hair, protective styles, and everyday scalp comfort.</p>
+            </div>
+            <div class="product-grid product-section-grid">
+              <article class="product-card" data-product-id="hair-shea" data-product-name="Nanasmama Hair Shea" data-product-price="19.99">
+                <button class="favorite-button" type="button" aria-label="Add Hair Shea 8.5 oz to favorites">♡</button>
+                <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/clearing-shea-jar-3.jpg" alt="Hair Shea">
+                <div class="product-copy">
+                  <p class="product-brand">Nana's Mama</p>
+                  <h3>Nanasmama Hair Shea</h3>
+                  <p class="product-summary">A rich shea butter hair blend made to moisturize, soften, and add natural shine to dry or textured hair. Perfect for natural hair, braids, twists, and protective styles.</p>
+                  <strong class="product-price" data-product-price-display>$19.99</strong>
+                  <div class="product-option-group" aria-label="Choose Hair Shea size">
+                    <span class="product-option-label">Size:</span>
+                    <div class="product-size-options">
+                      <button class="product-size-option is-selected" type="button" data-product-variant data-variant-id="hair-shea-big" data-variant-label="8.5 oz" data-variant-price="19.99" data-square-payment-link="https://square.link/u/UckQSgI8" aria-pressed="true">8.5 oz</button>
+                      <button class="product-size-option" type="button" data-product-variant data-variant-id="hair-shea-small" data-variant-label="5.5 oz" data-variant-price="14.99" data-square-payment-link="https://square.link/u/JcI10F50" aria-pressed="false">5.5 oz</button>
+                    </div>
+                  </div>
+                  <div class="product-option-group">
+                    <span class="product-option-label">Quantity:</span>
+                    <div class="quantity-selector" data-product-quantity>
+                      <button type="button" data-quantity-action="decrease" aria-label="Decrease Hair Shea quantity">-</button>
+                      <span data-quantity-value>1</span>
+                      <button type="button" data-quantity-action="increase" aria-label="Increase Hair Shea quantity">+</button>
+                    </div>
+                  </div>
+                  <div class="product-card-actions">
+                    <button class="button add-to-basket add-to-bag" type="button">Add to Cart</button>
+                    <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/UckQSgI8">Buy Now</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <div id="bath-body" class="section-anchor" aria-hidden="true"></div>
+          <section class="product-section">
+            <div class="section-intro">
+              <p class="eyebrow">Bath &amp; Body</p>
+              <h2>Cleansing essentials for the full-body routine</h2>
+              <p class="lede">Traditional staples designed to leave skin clean, comfortable, and ready for moisture.</p>
+            </div>
+            <div class="product-grid product-section-grid">
+              <article class="product-card" data-product-id="african-black-soap" data-product-name="Nanasmama African Black Soap" data-product-price="19.99">
+                <button class="favorite-button" type="button" aria-label="Add African Black Soap 8.5 oz to favorites">♡</button>
+                <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/african-black-soap.webp" alt="African Black Soap">
+                <div class="product-copy">
+                  <p class="product-brand">Nana's Mama</p>
+                  <h3>Nanasmama African Black Soap</h3>
+                  <p class="product-summary">A cleansing staple that leaves skin feeling refreshed, clean, and ready for moisture.</p>
+                  <strong class="product-price" data-product-price-display>$19.99</strong>
+                  <div class="product-option-group" aria-label="Choose African Black Soap size">
+                    <span class="product-option-label">Size:</span>
+                    <div class="product-size-options">
+                      <button class="product-size-option is-selected" type="button" data-product-variant data-variant-id="african-black-soap-big" data-variant-label="8.5 oz" data-variant-price="19.99" data-square-payment-link="https://square.link/u/45wLDhTP" aria-pressed="true">8.5 oz</button>
+                      <button class="product-size-option" type="button" data-product-variant data-variant-id="african-black-soap-small" data-variant-label="5.5 oz" data-variant-price="14.99" data-square-payment-link="https://square.link/u/UKXV35g3" aria-pressed="false">5.5 oz</button>
+                    </div>
+                  </div>
+                  <div class="product-option-group">
+                    <span class="product-option-label">Quantity:</span>
+                    <div class="quantity-selector" data-product-quantity>
+                      <button type="button" data-quantity-action="decrease" aria-label="Decrease African Black Soap quantity">-</button>
+                      <span data-quantity-value>1</span>
+                      <button type="button" data-quantity-action="increase" aria-label="Increase African Black Soap quantity">+</button>
+                    </div>
+                  </div>
+                  <div class="product-card-actions">
+                    <button class="button add-to-basket add-to-bag" type="button">Add to Cart</button>
+                    <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/45wLDhTP">Buy Now</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <div id="food-snacks" class="section-anchor" aria-hidden="true"></div>
+          <section class="product-section">
+            <div class="section-intro">
+              <p class="eyebrow">Food &amp; Snacks</p>
+              <h2>Pantry favorites with a Ghanaian touch</h2>
+              <p class="lede">Simple snack picks to add a familiar, flavorful finish to gifts and care packages.</p>
+            </div>
+            <div class="product-grid product-section-grid">
+              <article class="product-card" data-product-id="plantain-chips" data-product-name="Plantain Chips" data-product-price="7.00">
+                <button class="favorite-button" type="button" aria-label="Add Plantain Chips to favorites">♡</button>
+                <img loading="lazy" decoding="async" src="./assets/Nanas%20Mama/plantain-chips-square.jpg" alt="Plantain Chips">
+                <div class="product-copy">
+                  <p class="product-brand">Nana's Mama</p>
+                  <h3>Plantain Chips</h3>
+                  <p class="product-summary">Crunchy plantain chips for snack boxes, gifts, and everyday cravings.</p>
+                  <strong class="product-price" data-product-price-display>$7.00</strong>
+                  <div class="product-option-group">
+                    <span class="product-option-label">Quantity:</span>
+                    <div class="quantity-selector" data-product-quantity>
+                      <button type="button" data-quantity-action="decrease" aria-label="Decrease Plantain Chips quantity">-</button>
+                      <span data-quantity-value>1</span>
+                      <button type="button" data-quantity-action="increase" aria-label="Increase Plantain Chips quantity">+</button>
+                    </div>
+                  </div>
+                  <div class="product-card-actions">
+                    <button class="button add-to-basket add-to-bag" type="button">Add to Cart</button>
+                    <button class="button buy-now-button" type="button" data-buy-now data-square-payment-link="https://square.link/u/Y8QxdxDU">Buy Now</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img loading="lazy" decoding="async" class="footer-logo" src="./assets/nanasmama-logo.png" alt="Nana's Mama logo">
+          <p>Pure, handcrafted care rooted in Ghanaian heritage.</p>
+        </div>
+        <div>
+          <h2>Site Map</h2>
+          <a href="./index.html#hero">Home</a>
+          <a href="./gifts.html">Shop Gifts</a>
+          <a href="./custom-packaging.html">Custom Packaging</a>
+          <a href="./gifts.html#upcoming">Upcoming</a>
+          <a href="./products.html">The Shop</a>
+          <a href="./our-work.html">Our Work</a>
+          <a href="./AboutUs.html">About Us</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./refund-policy.html">Return &amp; Refund Policy</a>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <a href="tel:+16159682293">+1 (615) 968-2293</a>
+          <a href="mailto:Nanasmamashea@gmail.com">Nanasmamashea@gmail.com</a>
+          <a href="sms:+16159682293">Text Nana's Mama</a>
+          <div class="footer-icon-row">
+            <div class="social-links" aria-label="Social media links">
+              <a class="social-link" href="tel:+16159682293" title="Call +1 (615) 968-2293" aria-label="Call +1 (615) 968-2293">
+                <span class="social-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+                <span class="sr-only">Phone</span>
+              </a>
+              <a class="social-link" href="mailto:Nanasmamashea@gmail.com" title="Email Nanasmamashea@gmail.com" aria-label="Email Nanasmamashea@gmail.com">
+                <span class="social-icon" aria-hidden="true"><i class="fa-regular fa-envelope"></i></span>
+                <span class="sr-only">Email</span>
+              </a>
+              <a class="social-link" href="https://www.instagram.com/nanas_mama.3?igsh=ajlncDlsejd2dno5" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+                <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+              </a>
+              <a class="social-link" href="https://www.youtube.com/@Nanas_mama" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+                <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+              </a>
+              <a class="social-link" href="https://www.snapchat.com/add/nanasmamahse?" target="_blank" rel="noreferrer noopener" aria-label="Snapchat">
+                <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-snapchat"></i></span>
+              </a>
+              <a class="social-link" href="sms:+16159682293" aria-label="Text Nana's Mama support">
+                <span class="social-icon" aria-hidden="true"><i class="fa-regular fa-comment-dots"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p>Copyright &copy; 2026 nanasmama.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <a class="floating-sms-chat" href="sms:+16159682293" aria-label="Text Nana's Mama support">
+    <i class="fa-regular fa-comment-dots" aria-hidden="true"></i>
+    <span class="sr-only">Text Nana's Mama support</span>
+  </a>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
