@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nana's Mama Hostinger Setup Instructions</title>
+  <style>
+    body {
+      color: #24201b;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.45;
+      margin: 34px;
+    }
+
+    h1 {
+      color: #5d2f18;
+      font-size: 22px;
+      margin: 0 0 6px;
+    }
+
+    h2 {
+      border-bottom: 1px solid #dbc4ad;
+      color: #744022;
+      font-size: 15px;
+      margin: 20px 0 8px;
+      padding-bottom: 4px;
+    }
+
+    p {
+      margin: 6px 0;
+    }
+
+    ol {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    code,
+    pre {
+      background: #f7efe8;
+      border: 1px solid #ead9cb;
+      border-radius: 4px;
+      color: #3a2a1f;
+      font-family: "Courier New", monospace;
+    }
+
+    code {
+      padding: 1px 4px;
+    }
+
+    pre {
+      margin: 8px 0;
+      padding: 8px 10px;
+      white-space: pre-wrap;
+    }
+
+    .note {
+      background: #fff7e8;
+      border-left: 4px solid #c57d3a;
+      margin-top: 10px;
+      padding: 8px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nana's Mama Hostinger Setup Instructions</h1>
+  <p>Use this guide to retrieve the Hostinger-ready project from GitHub, build it in VS Code, and upload it to Hostinger.</p>
+
+  <h2>1. Get The Project From GitHub</h2>
+  <ol>
+    <li>Open VS Code.</li>
+    <li>Open the VS Code terminal.</li>
+    <li>Choose where to save the project, then run:</li>
+  </ol>
+  <pre>cd ~/Documents
+git clone https://github.com/gyebi/nanasmama-hostinger.git
+cd nanasmama-hostinger</pre>
+
+  <h2>2. Install And Build</h2>
+  <ol>
+    <li>Install dependencies:</li>
+  </ol>
+  <pre>npm install</pre>
+  <ol start="2">
+    <li>Build the production website:</li>
+  </ol>
+  <pre>npm run build</pre>
+  <p>The upload-ready website will be inside:</p>
+  <pre>nanasmama-hostinger/dist</pre>
+
+  <h2>3. Upload To Hostinger</h2>
+  <ol>
+    <li>Log into Hostinger hPanel.</li>
+    <li>Open the correct website or domain.</li>
+    <li>Go to <code>Files</code> then <code>File Manager</code>.</li>
+    <li>Open the domain's <code>public_html</code> folder.</li>
+    <li>Delete Hostinger's default placeholder files, especially any old <code>index.html</code>.</li>
+    <li>Upload everything inside the local <code>dist</code> folder into <code>public_html</code>.</li>
+  </ol>
+  <div class="note">
+    Important: upload the contents of <code>dist</code>, not the <code>dist</code> folder itself.
+  </div>
+  <p>After upload, <code>public_html</code> should contain:</p>
+  <pre>index.html
+products.html
+contact.html
+assets/
+sitemap.xml
+robots.txt</pre>
+
+  <h2>4. Domain And SSL</h2>
+  <ol>
+    <li>In Hostinger, confirm the domain points to the hosting account.</li>
+    <li>Enable SSL so the site loads with <code>https://</code>.</li>
+    <li>Test these URLs:</li>
+  </ol>
+  <pre>https://nanasmama.com/
+https://nanasmama.com/products.html
+https://nanasmama.com/contact.html
+https://nanasmama.com/sitemap.xml</pre>
+
+  <h2>5. Contact Form Email Note</h2>
+  <p>The contact form uses Firebase to send email. Hostinger serves the static website, but Firebase handles the email request.</p>
+  <p>After upload, test the form here:</p>
+  <pre>https://nanasmama.com/contact.html</pre>
+  <ol>
+    <li>Submit a small test message through the contact form.</li>
+    <li>Confirm the email arrives at <code>nanasmamashea@gmail.com</code>.</li>
+    <li>If the form does not send, check that the Firebase Function is deployed and the <code>RESEND_API_KEY</code> secret is configured.</li>
+  </ol>
+</body>
+</html>

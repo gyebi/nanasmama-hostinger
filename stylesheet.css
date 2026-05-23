@@ -3561,3 +3561,50 @@ h1 {
     font-size: 2.2rem;
   }
 }
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+section,
+div {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .hero,
+  .container,
+  .section,
+  .products-grid,
+  .gift-grid,
+  .category-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero,
+  .container,
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .products-grid,
+  .gift-grid,
+  .category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
