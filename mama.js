@@ -179,6 +179,109 @@ const featuredCollections = {
         caption: "Reference sheets help plan a polished series of client or team gifts."
       }
     ]
+  },
+  "baby-gifts": {
+    category: "Baby gifts",
+    title: "Baby Welcome Baskets",
+    images: [
+      {
+        src: "./assets/custom-gifting/baby-gifts/baby-girl-floral-basket-front.jpg",
+        alt: "Pink baby girl floral gift basket",
+        caption: "Soft florals, plush textures, and keepsake details for a baby welcome gift."
+      },
+      {
+        src: "./assets/custom-gifting/baby-gifts/baby-girl-basket-close.jpg",
+        alt: "Close-up of pink baby girl gift basket",
+        caption: "Layered ribbons and flowers make the basket feel full, personal, and photo-ready."
+      },
+      {
+        src: "./assets/custom-gifting/baby-gifts/baby-girl-doll-basket.jpg",
+        alt: "Baby girl doll gift basket",
+        caption: "A playful doll centerpiece turns the gift into a sweet nursery moment."
+      },
+      {
+        src: "./assets/custom-gifting/baby-gifts/baby-boy-gift-close.jpg",
+        alt: "Blue baby boy gift basket close-up",
+        caption: "Blue florals and baby essentials create a polished welcome gift for a new arrival."
+      },
+      {
+        src: "./assets/custom-gifting/baby-gifts/baby-boy-logistics-crate.jpg",
+        alt: "Baby boy logistics crate gift",
+        caption: "Themed crates give baby gifts a custom story from the first look."
+      },
+      {
+        src: "./assets/custom-gifting/baby-gifts/daisy-baby-gift-basket.jpg",
+        alt: "Personalized Daisy baby gift basket",
+        caption: "Personalized baby baskets can be styled around names, colors, and keepsake details."
+      }
+    ]
+  },
+  "message-boards": {
+    category: "Personalized",
+    title: "Message Board Gifts",
+    images: [
+      {
+        src: "./assets/custom-gifting/packaging/blue-ribbon-thank-you-gift-bags.jpg",
+        alt: "Blue ribbon thank-you gift bags",
+        caption: "Coordinated blue ribbons and florals make thank-you gifts feel bright and intentional."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/blue-ribbon-personalized-gift-bag.jpg",
+        alt: "Personalized blue ribbon thank-you gift bag",
+        caption: "Personalized message boards help each recipient feel directly remembered."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/yellow-floral-message-board-full.jpg",
+        alt: "Yellow floral message board gift",
+        caption: "Yellow floral styling brings warmth to appreciation gifts and family thank-yous."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/yellow-floral-message-board-close.jpg",
+        alt: "Close-up of yellow floral message board",
+        caption: "Close floral details add texture and a handcrafted finish."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/yellow-thank-you-board-arrangement.jpg",
+        alt: "Yellow thank-you board arrangement",
+        caption: "Message boards can be styled with flowers, products, and ribbon for a complete gift."
+      },
+      {
+        src: "./assets/custom-gifting/collections/green-mummy-message-board.jpg",
+        alt: "Green mummy message board gift",
+        caption: "Custom names and messages make each board feel made for one person."
+      }
+    ]
+  },
+  "black-gold": {
+    category: "Birthday",
+    title: "Black & Gold Gift Sets",
+    images: [
+      {
+        src: "./assets/custom-gifting/packaging/black-gold-gift-stack-side.jpg",
+        alt: "Black and gold custom birthday gift stack",
+        caption: "Black paper, gold studs, and satin ribbon create a bold birthday presentation."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/black-gold-gift-stack-front.jpg",
+        alt: "Front view of black and gold gift stack",
+        caption: "A framed message anchors the gift and gives the packaging a keepsake feel."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/black-gold-gift-stack-centered.jpg",
+        alt: "Centered black and gold gift stack",
+        caption: "Stacked boxes make milestone gifts feel substantial and celebratory."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/black-gold-birthday-ribbon-detail.jpg",
+        alt: "Black and gold birthday ribbon detail",
+        caption: "Ribbon and pearl accents add shine without losing the clean black-and-gold theme."
+      },
+      {
+        src: "./assets/custom-gifting/packaging/black-gold-framed-message-gift.jpg",
+        alt: "Black and gold gift with framed message",
+        caption: "A framed note turns the outside of the gift into part of the experience."
+      }
+    ]
   }
 };
 
