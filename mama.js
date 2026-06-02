@@ -31,6 +31,10 @@ const contactBriefMessage = document.querySelector("[data-contact-brief-message]
 const contactOrderSuccess = document.querySelector("[data-contact-order-success]");
 const contactOrderReference = document.querySelector("[data-contact-order-reference]");
 const contactDepositLink = document.querySelector("[data-contact-deposit-link]");
+const contactReferencePreview = document.querySelector("[data-contact-reference-preview]");
+const contactReferenceImage = document.querySelector("[data-contact-reference-image]");
+const contactReferenceTitle = document.querySelector("[data-contact-reference-title]");
+const contactReferenceCategory = document.querySelector("[data-contact-reference-category]");
 const previousPageLinks = document.querySelectorAll("[data-return-previous]");
 const checkoutItems = document.querySelector("[data-checkout-items]");
 const checkoutSubtotal = document.querySelector("[data-checkout-subtotal]");
@@ -69,6 +73,7 @@ const CONTACT_ERROR_MESSAGE = "Unable to send your message right now. Please ema
 const CART_STORAGE_KEY = "nanasmama-cart";
 const FAVORITES_STORAGE_KEY = "nanasmama-favorites";
 const PREVIOUS_PAGE_STORAGE_KEY = "nanasmama-previous-page";
+const CONTACT_REFERENCE_STORAGE_KEY = "nanasmama-contact-reference";
 const basket = new Map();
 let checkoutDetails = null;
 let cartOrderReferenceValue = "";
@@ -331,6 +336,42 @@ const setActiveNavigationLink = () => {
 
 setActiveNavigationLink();
 
+const applyProductCategoryView = () => {
+  const productStack = document.querySelector(".section-stack");
+  if (!productStack) {
+    return;
+  }
+
+  const categoryIds = ["skin-care", "hair-care", "bath-body", "food-snacks"];
+  const activeCategoryId = categoryIds.find((categoryId) => window.location.hash === `#${categoryId}`);
+  const bestsellers = document.querySelector(".bestsellers-shop");
+
+  bestsellers?.toggleAttribute("hidden", Boolean(activeCategoryId));
+
+  categoryIds.forEach((categoryId) => {
+    const anchor = document.getElementById(categoryId);
+    const section = anchor?.nextElementSibling;
+    const shouldHide = Boolean(activeCategoryId) && categoryId !== activeCategoryId;
+
+    anchor?.toggleAttribute("hidden", shouldHide);
+    if (section instanceof HTMLElement && section.classList.contains("product-section")) {
+      section.toggleAttribute("hidden", shouldHide);
+    }
+  });
+
+  if (activeCategoryId) {
+    window.requestAnimationFrame(() => {
+      document.getElementById(activeCategoryId)?.scrollIntoView({ block: "start" });
+    });
+  }
+};
+
+applyProductCategoryView();
+window.addEventListener("hashchange", () => {
+  applyProductCategoryView();
+  setActiveNavigationLink();
+});
+
 const formatMoney = (value) => `$${value.toFixed(2)}`;
 
 let cartToastTimeoutId = 0;
@@ -413,6 +454,15 @@ const readStoredList = (key) => {
     return rawValue ? JSON.parse(rawValue) : [];
   } catch {
     return [];
+  }
+};
+
+const readStoredValue = (key, fallbackValue = null) => {
+  try {
+    const rawValue = window.localStorage.getItem(key);
+    return rawValue ? JSON.parse(rawValue) : fallbackValue;
+  } catch {
+    return fallbackValue;
   }
 };
 
@@ -980,9 +1030,99 @@ const renderCartPage = () => {
   });
 };
 
+const getWorkReferenceFromCard = (card) => {
+  const title = card.querySelector("h3")?.textContent?.trim() || "";
+  const category = card.querySelector("span")?.textContent?.trim() || "";
+  const image = card.querySelector("img")?.getAttribute("src") || "";
+
+  if (!title || !category || !image) {
+    return null;
+  }
+
+  return { title, category, image };
+};
+
+const getStoredContactReference = () => {
+  const reference = readStoredValue(CONTACT_REFERENCE_STORAGE_KEY, null);
+  if (!reference || typeof reference !== "object") {
+    return null;
+  }
+
+  const title = String(reference.title ?? "").trim();
+  const category = String(reference.category ?? "").trim();
+  const image = String(reference.image ?? "").trim();
+
+  if (!title || !category || !image) {
+    return null;
+  }
+
+  return { title, category, image };
+};
+
+const getContactReferenceMessage = (reference) => {
+  if (!reference) {
+    return "";
+  }
+
+  return [
+    "Selected gallery reference:",
+    `Title: ${reference.title}`,
+    `Category: ${reference.category}`,
+    `Image: ${reference.image}`
+  ].join("\n");
+};
+
+const renderContactReference = () => {
+  if (!contactReferencePreview) {
+    return null;
+  }
+
+  const reference = getStoredContactReference();
+  if (!reference) {
+    contactReferencePreview.hidden = true;
+    return null;
+  }
+
+  if (contactReferenceImage instanceof HTMLImageElement) {
+    contactReferenceImage.src = reference.image;
+    contactReferenceImage.alt = `${reference.title} reference`;
+  }
+  if (contactReferenceTitle) {
+    contactReferenceTitle.textContent = reference.title;
+  }
+  if (contactReferenceCategory) {
+    contactReferenceCategory.textContent = reference.category;
+  }
+  contactReferencePreview.hidden = false;
+
+  return reference;
+};
+
+let selectedContactReference = renderContactReference();
+
 document.addEventListener("click", (event) => {
   const target = event.target;
   if (!(target instanceof HTMLElement)) {
+    return;
+  }
+
+  const requestSimilarButton = target.closest("[data-request-similar]");
+  if (requestSimilarButton instanceof HTMLElement) {
+    const card = requestSimilarButton.closest(".work-gallery-card");
+    if (!card) {
+      return;
+    }
+
+    const reference = getWorkReferenceFromCard(card);
+    if (reference) {
+      try {
+        writeStoredValue(CONTACT_REFERENCE_STORAGE_KEY, reference);
+      } catch (error) {
+        // The contact form still works if browser storage is unavailable.
+      }
+    }
+
+    window.location.href = "./contact.html#contact-brief";
     return;
   }
 
@@ -1351,6 +1491,9 @@ if (contactBriefForm) {
     const submitButton = contactBriefForm.querySelector("[type='submit']");
     const formData = new FormData(contactBriefForm);
     const orderReference = generateOrderReference();
+    selectedContactReference = selectedContactReference || getStoredContactReference();
+    const message = String(formData.get("message") ?? "").trim();
+    const referenceMessage = getContactReferenceMessage(selectedContactReference);
     const payload = {
       name: String(formData.get("name") ?? "").trim(),
       phone: String(formData.get("phone") ?? "").trim(),
@@ -1358,7 +1501,8 @@ if (contactBriefForm) {
       requestType: String(formData.get("requestType") ?? "").trim(),
       occasion: String(formData.get("occasion") ?? "").trim(),
       budget: String(formData.get("budget") ?? "").trim(),
-      message: String(formData.get("message") ?? "").trim(),
+      message: [message, referenceMessage].filter(Boolean).join("\n\n"),
+      galleryReference: selectedContactReference,
       orderReference
     };
 
@@ -1400,6 +1544,15 @@ if (contactBriefForm) {
       }
 
       contactBriefForm.reset();
+      try {
+        window.localStorage.removeItem(CONTACT_REFERENCE_STORAGE_KEY);
+      } catch (error) {
+        // The success state is enough if storage cannot be cleared.
+      }
+      selectedContactReference = null;
+      if (contactReferencePreview) {
+        contactReferencePreview.hidden = true;
+      }
       if (contactBriefMessage) {
         contactBriefMessage.hidden = false;
         contactBriefMessage.textContent = `Thanks. Your gift brief has been sent. Order Reference: ${orderReference}.`;
